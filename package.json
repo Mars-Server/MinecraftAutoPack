@@ -1,0 +1,29 @@
+{
+    "name": "minecraftaddonpack",
+    "module": "src/main.ts",
+    "scripts": {
+        "start": "bun run src/main.ts",
+        "build-windows": "bun build --compile --sourcemap --bytecode ./src/main.ts --target=bun-windows-x64 --outfile builds/Mars-windows --minify",
+        "build-linux": "bun build --compile --sourcemap --bytecode ./src/main.ts --target=bun-linux-x64 --outfile builds/Mars-linux --minify",
+        "build-mac": "bun build --compile --sourcemap --bytecode ./src/main.ts --target=bun-darwin-arm64 --outfile builds/Mars-mac --minify"
+    },
+    "type": "module",
+    "private": true,
+    "devDependencies": {
+        "@types/archiver": "^6.0.3",
+        "@types/bun": "latest",
+        "@types/express": "^5.0.3",
+        "@types/unzipper": "^0.10.11"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.828.0",
+        "archiver": "^7.0.1",
+        "chalk": "^5.4.1",
+        "express": "^5.1.0",
+        "open": "^10.1.2",
+        "unzipper": "^0.12.3"
+    }
+}

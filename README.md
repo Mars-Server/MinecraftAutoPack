@@ -1,1 +1,1 @@
-# MinecraftAutoPack
+# MinecraftAddonPack
